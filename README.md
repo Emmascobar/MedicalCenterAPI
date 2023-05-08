@@ -45,7 +45,7 @@ With the correct use of MEDICAL CENTER API, you will be able to:
 - Java / Spring / SpringBoot : to write the API code by using the libraries provided by both frameworks.
 - JPA: to map and relate the API with the database.
 - MySQL: to review and administrate the database.
-// - Unit testing : (In future updates) to test the functionality of all repository routes and controllers. //
+- Unit testing : // (In future updates) to test the functionality of all repository routes and controllers. //
 
 
 ## Information for Devs:
