@@ -10,12 +10,12 @@ Medical Center API is an application developed under the REST API architecture c
 
 ## Specifications
 With the correct use of MEDICAL CENTER API, you will be able to:
-#### - Create Users: administrators, doctors, recepcionist, pharmacists and patient accounts.
-#### - Use Medical Calculator and Score: these will be accompanied by their respective classifications, treatment suggestions and will be recorded in a "Medical Report".
-#### - Create appointments with day, time and assigned doctor.
-#### - Register insurance and benefits in the database that can later be applied to patient treatments.
-#### - Add medications to the stock, prescribe to the patient and allow their delivery with the discount that corresponds to them according to their medical insurance.
-#### - View data and appointments of patients.
+- Create Users: administrators, doctors, recepcionist, pharmacists and patient accounts.
+- Use Medical Calculator and Score: these will be accompanied by their respective classifications, treatment suggestions and will be recorded in a "Medical Report".
+- Create appointments with day, time and assigned doctor.
+- Register insurance and benefits in the database that can later be applied to patient treatments.
+- Add medications to the stock, prescribe to the patient and allow their delivery with the discount that corresponds to them according to their medical insurance.
+- View data and appointments of patients.
 
 ## Permissions:
 #### ADMINS permissions:
