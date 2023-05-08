@@ -16,9 +16,9 @@ public class Drug {
     @NotEmpty(message = "Presentation is necesary")
     private String presentation;
     private Integer stock;
-    @ManyToOne
-    @JoinColumn(name = "pharmacy_order")
-    private PharmacyOrder pharmacyOrder;
+//    @ManyToOne
+//    @JoinColumn(name = "pharmacy_order")
+//    private PharmacyOrder pharmacyOrder;
     private Double price;
     public Drug() {
     }

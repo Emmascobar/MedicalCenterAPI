@@ -423,7 +423,7 @@ public class DoctorServiceImpl implements DoctorService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Patient not found");
         } else {
             log.info(" REMEMBER:" +
-                    "DOSAGE ORDERED(DO) is the total doses ordered by the doctor per KILOGRAMS. Ex 4mg/kg." +
+                    "DOSAGE ORDERED (DO) is the total doses ordered by the doctor per KILOGRAMS. Ex 4mg/kg." +
                     "The REQUIRED DOSES is the resul of the multiplication of weight in kgs by the DO" +
                     "then you need to simplificate depends of the presentation of medication = mg/ml");
             // Formula:
@@ -516,6 +516,7 @@ public class DoctorServiceImpl implements DoctorService {
         if (optionalPatient.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Patient not found");
         } else {
+            //CALCULATOR ACCORDING DATA
             Integer totalScore = 0;
             int edad = (LocalDate.now().getYear() - optionalPatient.get().getDayOfBirth().getYear());
             if (edad >= 65 && edad < 75) {
@@ -526,7 +527,7 @@ public class DoctorServiceImpl implements DoctorService {
                 totalScore = +2;
             } else if (cha2DS2VASScore.isHeartFailure()) {
                 totalScore++;
-            } else if (cha2DS2VASScore.isHighArterialPreassure()) {
+            } else if (cha2DS2VASScore.isHighArterialPressure()) {
                 totalScore++;
             } else if (cha2DS2VASScore.isDiabetes()) {
                 totalScore++;
@@ -567,6 +568,7 @@ public class DoctorServiceImpl implements DoctorService {
         } else {
             int edad = (LocalDate.now().getYear() - optionalPatient.get().getDayOfBirth().getYear());
             double GFR = 0;
+            // Formulas:
             if (Objects.equals(optionalPatient.get().getGenre(), "Female") && renalFunction.getSerumCreatinine() <= 62) {
                 GFR = (144 * Math.pow(-0.329, renalFunction.getSerumCreatinine() / 62) * Math.pow(edad, 0.993));
             } else if (Objects.equals(optionalPatient.get().getGenre(), "Female") && renalFunction.getSerumCreatinine() > 62) {

@@ -27,9 +27,8 @@ public interface DoctorService {
 
     PharmacyOrder addNewPharmacyOrder(Long patientId, PharmacyOrder pharmacyOrder);
 
-    MedicalReport addNewMedicalReport(Long patientId, MedicalReport medicalReport);
-
     ComplementaryTest addNewComplementaryTest(Long patientId, ComplementaryTest complementaryTest);
+    MedicalReport addNewMedicalReport(Long patientId, MedicalReport medicalReport);
 
     BloodPressureRegistry BPClassification(Long patientId, BloodPressureRegistryDTO bloodPressureRegistryDTO);
 

@@ -17,9 +17,7 @@ public class PatientServiceImpl implements PatientService {
     PatientRepository patientRepository;
     @Autowired
     AppointmentRepository appointmentRepository;
-//    public List<Appointment> findAppointments(Long patientId) {
-//        return appointmentRepository.findByPatientId(patientId);
-//    }
+
     public List<Appointment> findAppointments(Long patientId) {
         Optional<Patient> optionalPatient = patientRepository.findById(patientId);
         List<Appointment> listOfAppointments = optionalPatient.get().getAppointments();

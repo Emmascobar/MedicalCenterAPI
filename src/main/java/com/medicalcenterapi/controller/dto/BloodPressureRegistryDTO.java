@@ -1,6 +1,6 @@
 package com.medicalcenterapi.controller.dto;
 
-import com.medicalcenterapi.model.utils.Comorbidity;
+import com.medicalcenterapi.model.others.Comorbidity;
 
 public class BloodPressureRegistryDTO {
 

@@ -1,5 +1,6 @@
 package com.medicalcenterapi.model.utils;
 
+import com.medicalcenterapi.model.others.ServiceArea;
 import com.medicalcenterapi.model.users.Doctor;
 import com.medicalcenterapi.model.users.Patient;
 import jakarta.persistence.*;
@@ -24,17 +25,18 @@ public class ComplementaryTest {
     @JoinColumn(name = "doctor")
     @NotEmpty(message = "Doctor can't be empty")
     private Doctor doctor;
-    @NotEmpty
-    private String type;
+    @Enumerated(EnumType.STRING)
+    private ServiceArea serviceArea;
     @NotEmpty
     private LocalDate appointmentDate;
     private BigDecimal totalPrice;
     public ComplementaryTest() {
     }
-    public ComplementaryTest(Patient patient, Doctor doctor, String type, LocalDate appointmentDate, BigDecimal totalPrice) {
+
+    public ComplementaryTest(Patient patient, Doctor doctor, ServiceArea serviceArea, LocalDate appointmentDate, BigDecimal totalPrice) {
         this.patient = patient;
         this.doctor = doctor;
-        this.type = type;
+        this.serviceArea = serviceArea;
         this.appointmentDate = appointmentDate;
         this.totalPrice = totalPrice;
     }
@@ -45,10 +47,6 @@ public class ComplementaryTest {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public LocalDate getCREATION_DATE() {
-        return CREATION_DATE;
     }
 
     public Patient getPatient() {
@@ -67,12 +65,12 @@ public class ComplementaryTest {
         this.doctor = doctor;
     }
 
-    public String getType() {
-        return type;
+    public ServiceArea getServiceArea() {
+        return serviceArea;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setServiceArea(ServiceArea serviceArea) {
+        this.serviceArea = serviceArea;
     }
 
     public LocalDate getAppointmentDate() {

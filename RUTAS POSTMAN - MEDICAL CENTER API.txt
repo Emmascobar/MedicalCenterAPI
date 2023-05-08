@@ -1,0 +1,24 @@
+MEDICAL CENTER API
+
+NEW ADMIN
+{
+        "username" : "admin",
+        "password" : "adminpass"
+
+}
+
+NEW DOCTOR
+{
+        "username" : "Doctor01",
+        "password" : "doctor01pass",
+        "name" : "Gaston",
+        "surname" : "Fernandez",
+        "nin" : "NIN33026569", 
+        "dayOfBirth" : "1988-09-03",
+        "sex" : "Masc",
+        "genre" : "Masc",
+        "telephoneNumber" : "3721635268",
+        "accountNumber" : "65987423615986325419",
+        "ssnumber" : "SS134859632",
+        "speciality" : "DERMATOLOGY"
+}

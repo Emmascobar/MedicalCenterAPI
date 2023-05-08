@@ -13,35 +13,36 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/receptionist")
 public class ReceptionistControllerImpl implements ReceptionistController {
 
     @Autowired
     ReceptionistServices receptionistServices;
 
     /** GET ROUTES **/
-    @GetMapping("/receptionist/patients")
+    @GetMapping("/patients")
     @ResponseStatus(HttpStatus.OK)
     public List<Patient> getAllPatients() {
         return receptionistServices.findAllPatients();
     }
-    @GetMapping("/receptionist/patients/id/{id}")
+    @GetMapping("/patients/id/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Optional<Patient> getPatientById(@PathVariable Long id) {
         return receptionistServices.findPatientById(id);
     }
-    @GetMapping("/receptionist/patients/get/")
+    @GetMapping("/patients/get/")
     @ResponseStatus(HttpStatus.OK)
     public Optional<Patient> getPatientByNameOrSurname(@RequestParam(required = false) String name, @RequestParam(required = false) String surname) {
         return receptionistServices.findPatientByNameOrSurname(name, surname);
     }
-    @GetMapping("/receptionist/patients/nin/{nin}")
+    @GetMapping("/patients/nin/{nin}")
     @ResponseStatus(HttpStatus.OK)
     public Optional<Patient> getPatientByNin(@PathVariable String nin) {
         return receptionistServices.findPatientByNin(nin);
     }
 
     /** POST ROUTES **/
-    @PostMapping("/receptionist/patients/{id}/add")
+    @PostMapping("/patients/{id}/add")
     @ResponseStatus(HttpStatus.CREATED)
     public Appointment postNewAppointment(@PathVariable Long id, @RequestBody @Valid Appointment appointment) {
         return receptionistServices.addNewAppointment(id, appointment);

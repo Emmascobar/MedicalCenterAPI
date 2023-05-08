@@ -1,4 +1,4 @@
-package com.medicalcenterapi.model.utils;
+package com.medicalcenterapi.model.others;
 
 public enum Speciality {
     ALLERGYANDIMMUNOLOGY,

@@ -7,7 +7,7 @@ public class CHA2DS2VASScore {
      */
 
     private boolean heartFailure;
-    private boolean highArterialPreassure;
+    private boolean highArterialPressure;
     private boolean diabetes;
     private boolean StrokeVascularHistory;
     private boolean DiseaseVascularHistory;
@@ -16,9 +16,9 @@ public class CHA2DS2VASScore {
     public CHA2DS2VASScore() {
     }
 
-    public CHA2DS2VASScore(boolean heartFailure, boolean highArterialPreassure, boolean diabetes, boolean strokeVascularHistory, boolean diseaseVascularHistory, boolean isWomen) {
+    public CHA2DS2VASScore(boolean heartFailure, boolean highArterialPressure, boolean diabetes, boolean strokeVascularHistory, boolean diseaseVascularHistory, boolean isWomen) {
         this.heartFailure = heartFailure;
-        this.highArterialPreassure = highArterialPreassure;
+        this.highArterialPressure = highArterialPressure;
         this.diabetes = diabetes;
         StrokeVascularHistory = strokeVascularHistory;
         DiseaseVascularHistory = diseaseVascularHistory;
@@ -33,12 +33,12 @@ public class CHA2DS2VASScore {
         this.heartFailure = heartFailure;
     }
 
-    public boolean isHighArterialPreassure() {
-        return highArterialPreassure;
+    public boolean isHighArterialPressure() {
+        return highArterialPressure;
     }
 
-    public void setHighArterialPreassure(boolean highArterialPreassure) {
-        this.highArterialPreassure = highArterialPreassure;
+    public void setHighArterialPressure(boolean highArterialPressure) {
+        this.highArterialPressure = highArterialPressure;
     }
 
     public boolean isDiabetes() {

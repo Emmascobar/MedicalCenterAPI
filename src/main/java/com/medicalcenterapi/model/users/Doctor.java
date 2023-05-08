@@ -1,5 +1,6 @@
 package com.medicalcenterapi.model.users;
 
+import com.medicalcenterapi.model.others.Speciality;
 import com.medicalcenterapi.model.utils.*;
 import jakarta.persistence.*;
 

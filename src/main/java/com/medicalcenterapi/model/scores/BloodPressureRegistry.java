@@ -1,7 +1,7 @@
 package com.medicalcenterapi.model.scores;
 
 import com.medicalcenterapi.model.users.Patient;
-import com.medicalcenterapi.model.utils.Comorbidity;
+import com.medicalcenterapi.model.others.Comorbidity;
 import jakarta.persistence.*;
 import org.jetbrains.annotations.NotNull;
 

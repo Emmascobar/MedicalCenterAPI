@@ -1,5 +1,6 @@
 package com.medicalcenterapi.model.utils;
 
+import com.medicalcenterapi.model.others.ListOfDrugs;
 import com.medicalcenterapi.model.users.Doctor;
 import com.medicalcenterapi.model.users.Patient;
 import jakarta.persistence.*;
@@ -24,6 +25,7 @@ public class PharmacyOrder {
     @JoinColumn(name = "doctor")
     @NotEmpty(message = "Doctor can't be empty")
     private Doctor doctor;
+
     private List<ListOfDrugs> listOfDrugs;
     @ManyToOne
     @JoinColumn(name = "insurance_id")
