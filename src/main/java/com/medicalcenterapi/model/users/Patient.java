@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
+@Table(name = "patients")
 public class Patient extends User{
 
     @NotEmpty(message = "Insert a name")

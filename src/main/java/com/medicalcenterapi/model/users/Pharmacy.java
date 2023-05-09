@@ -1,8 +1,11 @@
 package com.medicalcenterapi.model.users;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
 import javax.validation.constraints.NotEmpty;
 
 @Entity
+@Table(name = "pharmacists")
 public class Pharmacy extends User {
     @NotEmpty(message = "Insert a name")
     private String name;

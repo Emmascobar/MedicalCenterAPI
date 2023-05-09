@@ -4,9 +4,11 @@ import jakarta.persistence.*;
 import org.jetbrains.annotations.NotNull;
 
 import javax.validation.constraints.NotEmpty;
+import java.io.Serializable;
 
 @Entity
-public class Drug {
+@Table(name = "medications")
+public class Medication implements Serializable {
     @Id
     @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,14 +18,12 @@ public class Drug {
     @NotEmpty(message = "Presentation is necesary")
     private String presentation;
     private Integer stock;
-//    @ManyToOne
-//    @JoinColumn(name = "pharmacy_order")
-//    private PharmacyOrder pharmacyOrder;
+
     private Double price;
-    public Drug() {
+    public Medication() {
     }
 
-    public Drug(String name, String presentation, Integer stock, Double price) {
+    public Medication(String name, String presentation, Integer stock, Double price) {
         this.name = name;
         this.presentation = presentation;
         this.stock = stock;

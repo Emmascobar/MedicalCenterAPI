@@ -1,7 +1,7 @@
 package com.medicalcenterapi.controller.Impl;
 
 import com.medicalcenterapi.controller.interfaces.PharmacyController;
-import com.medicalcenterapi.model.utils.Drug;
+import com.medicalcenterapi.model.utils.Medication;
 import com.medicalcenterapi.services.interfaces.PharmacyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,20 +17,20 @@ public class PharmacyControllerImpl implements PharmacyController {
     /** PATCH ROUTES **/
     @PatchMapping("/deliver-medication/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public void deliverDrugs(@PathVariable(name = "id") Long patientId) {
+    public void deliverMedication(@PathVariable(name = "id") Long patientId) {
         pharmacyService.deliverDrugs(patientId);
     }
 
-    @PatchMapping("/deliver-medication/{id}")
+    @PatchMapping("/update-stock/")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void increaseStock(@RequestParam String drugName,@RequestParam Integer quantity) {
         pharmacyService.increaseStock(drugName, quantity);
     }
 
     /** POST ROUTES **/
-    @PostMapping("/add-drugs/")
+    @PostMapping("/add-medications/")
     @ResponseStatus(HttpStatus.CREATED)
-    public Drug addNewDrug(@RequestParam String drugName, @RequestBody Drug drug) {
-        return pharmacyService.addNewDrug(drugName, drug);
+    public Medication addNewMedication(@RequestParam String drugName, @RequestBody Medication medication) {
+        return pharmacyService.addNewDrug(drugName, medication);
     }
 }

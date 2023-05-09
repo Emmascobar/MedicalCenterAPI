@@ -4,18 +4,22 @@ import com.medicalcenterapi.model.users.Doctor;
 import com.medicalcenterapi.model.users.Patient;
 import jakarta.persistence.*;
 import org.jetbrains.annotations.NotNull;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "appoinments")
 public class Appointment {
     @Id
     @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
-    @NotEmpty
+    @NotNull
+    @Column(name = "create_at")
     @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private final LocalDate CREATION_DATE = LocalDate.now();
     @NotEmpty
     @Temporal(TemporalType.DATE)

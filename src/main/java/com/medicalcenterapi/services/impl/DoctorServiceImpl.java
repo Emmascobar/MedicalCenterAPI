@@ -47,10 +47,6 @@ public class DoctorServiceImpl implements DoctorService {
     private MedicalReportRepository medicalReportRepository;
     @Autowired
     private ComplementaryTestRepository complementaryTestRepository;
-    @Autowired
-    private CriteriaForDVT criteriaForDVT;
-    @Autowired
-    GlasgowComaScale glasgowComaScale;
 
     /**
      * METHODS

@@ -7,6 +7,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 @Entity
+@Table(name = "insurances")
 public class Insurance {
     @Id
     @NotNull
